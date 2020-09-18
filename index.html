@@ -8,7 +8,16 @@
 </head>
 <body>
     <h1 class="title">Maquina de cambio</h1>
-    <h2></h2>
-    <input type="text">
+    <div class="form-group">
+        <label for="item">Valor del producto:</label>
+        <input id="item" type="text">
+    </div>
+    <div class="form-group">
+        <label for="cost">Dinero dado por el cliente:</label>
+        <input id="cost" type="text">
+    </div>
+    <button id="calc">Calcular cambio</button>
+    <h2>Cambio: $<span id="change">0</span></h2>
+    <script src="app.js"></script>
 </body>
 </html>
