@@ -4,7 +4,7 @@ const coins = [100, 50, 25, 5, 1]
 
 const calcChange = (item, cost) => {
     let change = parseInt(cost.value) - parseInt(item.value)
-    changeSpan.innerHTML = change
+    changeSpan.innerHTML = change > 0 ? change : `${0} <br> El dinero dado por el cliente es insufuciente`
     numberOfCoins = []
     for (let i = 0; i < coins.length; i++) {
         coinsCounter = 0
