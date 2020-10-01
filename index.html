@@ -8,16 +8,25 @@
 </head>
 <body>
     <h1 class="title">Maquina de cambio</h1>
-    <div class="form-group">
-        <label for="item">Valor del producto:</label>
-        <input id="item" type="text">
-    </div>
-    <div class="form-group">
-        <label for="cost">Dinero dado por el cliente:</label>
-        <input id="cost" type="text">
-    </div>
-    <button id="calc">Calcular cambio</button>
-    <h2>Cambio: $<span id="change">0</span></h2>
+    <main>
+        <div class="form-group">
+            <label for="item">Valor del producto:</label>
+            <input id="item" type="text">
+        </div>
+        <div class="form-group">
+            <label for="cost">Dinero dado por el cliente:</label>
+            <input id="cost" type="text">
+        </div>
+        <button id="calc">Calcular cambio</button>
+        <h2>Cambio: $<span id="change">0</span></h2>
+        <div class="coins">
+            <div><img src="moneda.gif" alt="moneda">100: <span id="100">0</span></div>
+            <div><img src="moneda.gif" alt="moneda">50: <span id="50">0</span></div>
+            <div><img src="moneda.gif" alt="moneda">25: <span id="25">0</span></div>
+            <div><img src="moneda.gif" alt="moneda">5: <span id="5">0</span></div>
+            <div><img src="moneda.gif" alt="moneda">1: <span id="1">0</span></div>
+        </div>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>

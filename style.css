@@ -8,6 +8,16 @@
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
+main {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
 .title {
     font-size: 48px;
     text-align: center;
@@ -22,4 +32,54 @@ input {
     border: 1px #ecf0f1 solid;
     border-radius: 5px;
     padding: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 5px 15px;
+    color: #34495e;
+    background-color: #ecf0f1;
+    border: 2px solid #34495e;
+    border-radius: 5px;
+    transition: 400ms color, 400ms background, 400ms border;
+    margin-bottom: 40px;
+}
+
+button:hover {
+    color: #ecf0f1;
+    border: 2px solid #ecf0f1;
+    background-color: #34495e;
+}
+
+.coins {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-weight: bold;
+}
+
+.coins div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coins div img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.coins div span {
+    font-weight: normal;
+    margin-left: 5px;
+} 
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    width: 230px;
+}
+
+.form-group label {
+    text-transform: uppercase;
 }

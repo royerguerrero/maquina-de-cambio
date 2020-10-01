@@ -3,24 +3,31 @@ const changeSpan  = document.getElementById('change')
 const coins = [100, 50, 25, 5, 1]
 
 const calcChange = (item, cost) => {
-    const change = parseInt(cost.value) - parseInt(item.value)
+    let change = parseInt(cost.value) - parseInt(item.value)
     changeSpan.innerHTML = change
-    let c = []
+    numberOfCoins = []
     for (let i = 0; i < coins.length; i++) {
-        let chageInCoin = change / coins[i]
-        if (Number.isInteger(chageInCoin)) {
-            
+        coinsCounter = 0
+        while (true) {
+            res = change - coins[i]
+            if (res < 0) {
+                break
+            } else {
+                change -= coins[i]
+                coinsCounter++
+            }
         }
+        numberOfCoins.push(coinsCounter)
     }
-    console.log(c)
-    // let counter = 0
-    // for (let i = 0; i < c.length; i++) {
-    //     console.log(c[i])
-    // }
+
+    return numberOfCoins
 }
 
 button.addEventListener("click", () => {
     const item = document.getElementById('item')
     const cost = document.getElementById('cost')
-    calcChange(item, cost)
+    numberOfCoins = calcChange(item, cost)
+    for (let i = 0; i < coins.length; i++) {
+        document.getElementById(coins[i]).innerHTML = numberOfCoins[i] 
+    }
 })
